@@ -21,6 +21,7 @@ class FollowsController < ApplicationController
     @follow.destroy!
 
     respond_to do |format|
+      # debugger
       format.html { redirect_to request.referrer }
       format.json { render json: @follow }
     end
